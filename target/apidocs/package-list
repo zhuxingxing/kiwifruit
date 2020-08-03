@@ -1,0 +1,11 @@
+com.star.access
+com.star.advice
+com.star.annotation
+com.star.aspect
+com.star.config
+com.star.constants
+com.star.dictionary
+com.star.exception
+com.star.pojo.dto
+com.star.pojo.vo
+com.star.service
