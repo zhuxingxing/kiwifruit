@@ -9,4 +9,4 @@ kiwifruit是一款数据字典自动转换工具包，用于简化开发。这�
 	4、操作日志记录
 
 入门示例:
-https://github.com/zhuxingxing/kiwifruit_demo
+https://github.com/zhuxingxing/kiwifruit
