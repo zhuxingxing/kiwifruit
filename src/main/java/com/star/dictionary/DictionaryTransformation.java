@@ -4,12 +4,10 @@ import com.star.annotation.Dictionary;
 import com.star.annotation.DictionaryIgnore;
 import com.star.constants.StarConstants;
 import com.star.pojo.dto.DataDictionary;
-import com.star.pojo.vo.ResponseVo;
 import com.star.service.IDataDictionary;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
@@ -43,19 +41,7 @@ public class DictionaryTransformation {
     /**
      * dictionary conversion
      *
-     * @param response response data
-     * @param methodParameter method object
-     */
-    public void transformation(ResponseVo response, MethodParameter methodParameter) {
-        if (null != response && null != methodParameter) {
-            transformation(response.getData(), methodParameter.getMethod());
-        }
-    }
-
-    /**
-     * dictionary conversion
-     *
-     * @param data object
+     * @param data   object
      * @param method method object
      */
     public void transformation(Object data, Method method) {
@@ -183,7 +169,7 @@ public class DictionaryTransformation {
         String setMethodName = StarConstants.SET.concat(capitalizeName);
         if (isMethodExist(clazz, getMethodName) && isMethodExist(clazz, setMethodName)) {
             Dictionary dictionary = field.getDeclaredAnnotation(Dictionary.class);
-            if(null==dictionary){
+            if (null == dictionary) {
                 return;
             }
             // dictionary collection
